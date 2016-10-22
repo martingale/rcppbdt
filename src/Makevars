@@ -1,15 +1,15 @@
 ## We want C++11 as it gets us 'long long' as well
-CC=clang-omp
+# CC=clang-omp
 #CC=clang
-#CC= gcc
- CXX=clang-omp++
+CC= gcc
+# CXX=clang-omp++
 # CXX=clang++
-# CXX=g++
+CXX=g++
 SHLIB_OPENMP_CFLAGS= -fopenmp
 SHLIB_OPENMP_CXXFLAGS= -fopenmp
 SHLIB_OPENMP_FCFLAGS= -fopenmp
 SHLIB_OPENMP_FFLAGS= -fopenmp
-CXX_STD = CXX11
+CXX_STD = g++ --std=c++11
 
 ## We need the headers exported via inst/include
 PKG_CPPFLAGS = -I../inst/include/
